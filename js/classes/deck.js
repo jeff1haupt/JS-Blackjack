@@ -8,7 +8,18 @@ export default class Deck {
         const suits = ['Clubs', 'Hearts', 'Diamonds', "Spades"];
         const cardValues = [
             [2, 'Two'],
-            [3, 'Three']
+            [3, 'Three'],
+            [4, 'Four'],
+            [5, 'Five'],
+            [6, 'Six'],
+            [7, 'Seven'],
+            [8, 'Eight'],
+            [9, 'Nine'],
+            [10, 'Ten'],
+            [10, 'Jack'],
+            [10, 'Queen'],
+            [10, 'King'],
+            [11, 'Ace'] // Will have to consider different ways to handle ace value (1 or 11)
         ]
         for (let suit of suits) {
             for ( let value of cardValues ) {
