@@ -23,7 +23,7 @@ export default class Deck {
         ]
         for (let suit of suits) {
             for ( let value of cardValues ) {
-                const card = new Card(value[0], suit, value[1]);
+                const card = new Card(value[0], suit, value[1], `../img/${suit}/${value[1]}.png`);
                 this.cards.push(card);
             }
         }
