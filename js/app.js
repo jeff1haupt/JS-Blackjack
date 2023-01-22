@@ -1,5 +1,6 @@
-import Card from "./classes/card.js";
 import Player from "./classes/players.js";
+import Deck from "./classes/deck.js";
 
-const card = new Card(2, 'Clubs', 'Two');
-console.log(card);
+const newDeck = new Deck();
+newDeck.createDeck();
+console.log(newDeck.cards);
