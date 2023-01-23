@@ -1,12 +1,8 @@
 import Player from "./classes/players.js";
 import Deck from "./classes/deck.js";
+import Shoe from "./classes/shoe.js";
 
-const newDeck = new Deck();
-newDeck.createDeck();
-console.log(newDeck.cards[25].image);
-
-let divMain = document.getElementById('main');
-let img = document.createElement('img');
-img.setAttribute('src', newDeck.cards[25].image)
-console.log(img);
-divMain.innerHTML = img;
+const shoe = new Shoe(5);
+shoe.addDecks();
+shoe.shuffleDecks();
+console.log(shoe.cardsInShoe);
