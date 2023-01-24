@@ -23,7 +23,7 @@ export default class Game {
     }
     dealCards () {
         for ( let p of this.players ) {
-            p.hand.push(this.shoe.pop());
+            p.hand.push(this.shoe.cardsInShoe.pop());
         }
     }
 }
