@@ -1,3 +1,4 @@
+import Dealer from "./dealer.js";
 import Player from "./players.js";
 import Shoe from "./shoe.js";
 
@@ -6,6 +7,7 @@ export default class Game {
         this.gameInPlay = true;
         this.players = [];
         this.shoe = [];
+        this.dealer = new Dealer();
     }
     getShoe () {
         if ( this.shoe.length < 1 ) {
@@ -22,8 +24,11 @@ export default class Game {
         this.players.push(player);
     }
     dealCards () {
-        for ( let p of this.players ) {
-            p.hand.push(this.shoe.cardsInShoe.pop());
+        for ( let i = 1; i <= 2; i++ ) {
+            for ( let p of this.players ) {
+                p.hand.push(this.shoe.cardsInShoe.pop());
+            }
+            this.dealer.hand.push(this.shoe.cardsInShoe.pop());
         }
     }
 }
