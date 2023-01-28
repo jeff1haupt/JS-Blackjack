@@ -4,5 +4,6 @@ export default class Player {
         this.bank = bank;
         this.hand = [];
         this.handValue = 0;
+        this.stand = false; 
     }
 }

@@ -26,9 +26,13 @@ export default class Game {
     dealCards () {
         for ( let i = 1; i <= 2; i++ ) {
             for ( let p of this.players ) {
-                p.hand.push(this.shoe.cardsInShoe.pop());
+                let currentCard = this.shoe.cardsInShoe.pop();
+                p.hand.push(currentCard);
+                p.handValue += currentCard.value;
             }
-            this.dealer.hand.push(this.shoe.cardsInShoe.pop());
+            let dealerCard = this.shoe.cardsInShoe.pop();
+            this.dealer.hand.push(dealerCard);
+            this.dealer.handValue += dealerCard.value;
         }
     }
 }
